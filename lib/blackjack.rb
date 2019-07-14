@@ -37,13 +37,15 @@ def hit? (card_total)
     deal_card
     card_total+deal_card = new_total
   if answer != "h" || "s"
-    
+    invalid_command
+    prompt_user
   end
   new_total
 end
+end
 
 def invalid_command
-  puts 
+  puts "Please enter a valid command"
 end
 
 #####################################################
