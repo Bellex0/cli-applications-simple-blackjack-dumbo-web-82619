@@ -15,7 +15,7 @@ def prompt_user
 end
 
 def get_user_input
-  user_input = gets.chomp
+  input = gets.chomp
 end
 
 def end_game(card_total)
@@ -32,11 +32,11 @@ end
 
 def hit? (card_total)
   prompt_user 
-  user_input = get_user_input #set a variable to use for your if/else statement
-  if user_input == "h"
-    card_total += deal_card #increase your former total by the new number given by dealing another card
-  elsif user_input == "s"
-    card_total #return the number and prompt user to hit again
+  answer = get_user_input
+  if answer == "h"
+    card_total += deal_card 
+  elsif answer == "s"
+    card_total 
   else
     invalid_command
   end
